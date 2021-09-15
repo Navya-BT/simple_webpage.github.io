@@ -18,8 +18,21 @@ loginForm.addEventListener("submit", e => {
         e.preventDefault();
 
         // Perform your AJAX/Fetch login
+    var name=document.loginform.name.value;  
+var password=document.loginform.psw.value;  
+  
+if (name==null || name==""){  
+  alert("Username can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+  else{
+location.href = 'homepage.html';
+  }
 
-        setFormMessage(loginForm, "error", "Invalid username/password combination");
+       // setFormMessage(loginForm, "error", "Invalid username/password combination");
     });
     document.querySelectorAll(".form__input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
