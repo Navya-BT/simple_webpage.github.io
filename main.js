@@ -20,13 +20,10 @@ loginForm.addEventListener("submit", e => {
         // Perform your AJAX/Fetch login
     var name=document.loginform.name.value;  
 var password=document.loginform.psw.value;  
-  
-if (name==null || name==""){  
-  alert("Username can't be blank");  
-  return false;  
+ if (name==null || name==""){  
+  setFormMessage(loginForm, "error", "Invalid username/password combination");
 }else if(password.length<6){  
-  alert("Password must be at least 6 characters long.");  
-  return false;  
+  setFormMessage(loginForm, "error", "Invalid username/password combination");
   }  
   else{
 location.href = 'homepage.html';
