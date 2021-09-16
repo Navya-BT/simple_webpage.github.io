@@ -4,9 +4,12 @@
 	<meta charset="utf-8">
 	<title>datepicker_page</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-	<link rel="stylesheet" href="navstyle.css">
-      
-
+	<link rel="stylesheet" href="./src/navstyle.css">
+  <link rel="stylesheet" href="./src/style.css">
+     
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <script src="./src/datejs.js"></script>
 </head>
 
 
@@ -20,7 +23,22 @@
 </div>
 
 <body>
-    <div >
+  <h1>SIMPLE <span> DATE</span> PICKER</h1>
+
+  <div class="date-picker">
+    <div class="selected-date"></div>
+
+    <div class="dates">
+      <div class="month">
+        <div class="arrows prev-mth">&lt;</div>
+        <div class="mth"></div>
+        <div class="arrows next-mth">&gt;</div>
+      </div>
+
+      <div class="days"></div>
     </div>
+  </div>
+
+  
 </body>
 </html>
